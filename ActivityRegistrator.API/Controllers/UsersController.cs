@@ -31,6 +31,7 @@ public class UsersController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetListAsync()
     {
+        return Ok("hehe");
         ResultListWrapper<UserEntity> response = await _userService.GetListAsync(TenantCode);
 
         if(response.Status != OperationStatus.Success)
