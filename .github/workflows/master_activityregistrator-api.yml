@@ -24,12 +24,12 @@ jobs:
         --name ActivityRegistrator.API.Models 
         --username any  
         --password ${{ secrets.AZURE_DEVOPS_PAT }} --store-password-in-clear-text
-
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
-
-    - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        
+    - name: Build ActivityRegistrator.API
+      run: dotnet build ActivityRegistrator.API/ActivityRegistrator.API.csproj --configuration Release
+      
+    - name: Publish ActivityRegistrator.API
+      run: dotnet publish ActivityRegistrator.API/ActivityRegistrator.API.csproj --configuration Release
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v4
