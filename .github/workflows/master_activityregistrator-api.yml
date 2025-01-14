@@ -3,7 +3,7 @@ name: Build and deploy ActivityRegistrator.Api
 on:
   push:
     branches:
-    - master
+    - bug/buildup-for-deployment
   workflow_dispatch:
 
 
