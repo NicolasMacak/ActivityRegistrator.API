@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 //builder.Services.AddTransient<IEnvironmentRepository, EnvironmentRepository>();
 
 //builder.AddAzureClients();
-builder.AddAutoMapper();
+//builder.AddAutoMapper();
 
 WebApplication app = builder.Build();
 

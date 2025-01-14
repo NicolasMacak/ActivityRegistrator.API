@@ -1,5 +1,5 @@
-﻿using ActivityRegistrator.Models.MappingProfiles;
-using AutoMapper;
+﻿//using ActivityRegistrator.Models.MappingProfiles;
+//using AutoMapper;
 using Azure;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
@@ -46,14 +46,14 @@ public static class WebApplicationBuilderExtensions
     /// <summary>
     /// Injects AutoMapper to the <see cref="WebApplicationBuilder.Services"/>
     /// </summary>
-    public static void AddAutoMapper(this WebApplicationBuilder builder)
-    {
-        MapperConfiguration configuration = new(cfg => {
-            cfg.AddProfile<UserProfile>(); 
-            } 
-        );
+    //public static void AddAutoMapper(this WebApplicationBuilder builder)
+    //{
+    //    MapperConfiguration configuration = new(cfg => {
+    //        cfg.AddProfile<UserProfile>(); 
+    //        } 
+    //    );
 
-        IMapper autoMapper = configuration.CreateMapper();
-        builder.Services.AddSingleton(autoMapper);
-    }
+    //    IMapper autoMapper = configuration.CreateMapper();
+    //    builder.Services.AddSingleton(autoMapper);
+    //}
 }
