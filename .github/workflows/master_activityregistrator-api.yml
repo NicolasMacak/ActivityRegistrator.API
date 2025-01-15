@@ -66,3 +66,4 @@ jobs:
         app-name: 'ActivityRegistratorAPI'
         slot-name: 'Production'
         package: .
+        startup-command: 'dotnet ActivityRegistrator.API.dll'
