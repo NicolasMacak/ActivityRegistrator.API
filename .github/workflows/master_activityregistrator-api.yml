@@ -1,9 +1,12 @@
-name: Build and deploy ActivityRegistrator.Api
+name: Build and deploy ActivityRegistrator.API
 
 on:
   push:
     branches:
     - master
+    paths:
+    - ActivityRegistrator.API/**
+    - .github/workflows/**
   workflow_dispatch:
 
 
