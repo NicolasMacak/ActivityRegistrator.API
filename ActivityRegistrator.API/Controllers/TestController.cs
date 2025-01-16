@@ -9,6 +9,6 @@ public class TestController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> PleaseWorkAsync()
     {
-        return Ok("Good news");
+        return Ok("Good newsy");
     }
 }
