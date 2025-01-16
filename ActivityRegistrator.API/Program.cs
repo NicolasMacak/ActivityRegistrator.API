@@ -10,12 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddTransient<IUserRepository, UserRepository>();
-//builder.Services.AddTransient<IUserService, UserService>();
-//builder.Services.AddTransient<IEnvironmentService, EnvironmentService>();
-//builder.Services.AddTransient<IEnvironmentRepository, EnvironmentRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IEnvironmentService, EnvironmentService>();
+builder.Services.AddTransient<IEnvironmentRepository, EnvironmentRepository>();
 
-//builder.AddAzureClients();
+builder.AddAzureClients();
 builder.AddAutoMapper();
 
 WebApplication app = builder.Build();
@@ -28,7 +28,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-//app.Services.GetRequiredService<IEnvironmentService>().SetupEnvironment();
+app.Services.GetRequiredService<IEnvironmentService>().SetupEnvironment();
 
 app.UseAuthorization();
 
